@@ -23,17 +23,18 @@ nav.classList.remove("scrolled");
 
 /* reveal animation */
 
-const reveals=document.querySelectorAll(".reveal");
+const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll",()=>{
-
-reveals.forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){
-el.classList.add("active");
+function revealOnLoad() {
+  reveals.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
 }
-});
 
-});
+window.addEventListener("load", revealOnLoad);
+window.addEventListener("scroll", revealOnLoad);
 
 /* magnetic buttons */
 
