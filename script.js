@@ -112,3 +112,47 @@ requestAnimationFrame(animate);
 }
 
 animate();
+const modal = document.getElementById('videoModal');
+const video = document.getElementById('demoVideo');
+
+modal.addEventListener('hidden.bs.modal', function () {
+video.pause();
+video.currentTime = 0;
+});
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+counter.innerText = "0";
+
+const updateCounter = () => {
+
+const target = +counter.getAttribute("data-target");
+const count = +counter.innerText;
+
+const increment = target / 200;
+
+if(count < target){
+counter.innerText = Math.ceil(count + increment);
+setTimeout(updateCounter, 10);
+}
+else{
+
+if(target === 50000){
+counter.innerText = "50K+";
+}
+else if(target === 1200){
+counter.innerText = "1,200+";
+}
+else if(target === 98){
+counter.innerText = "98%";
+}
+
+}
+
+};
+
+updateCounter();
+
+});
