@@ -607,3 +607,337 @@ row-gap:40px;
 }
 
 
+/* ================= POPULAR SECTION ================= */
+
+.popular-section{
+padding:120px 0 100px 0;
+background:#f8fafc;
+}
+
+.course-container{
+max-width:1200px;
+padding:0 20px;
+margin:auto;
+}
+
+/* Header */
+.badge-popular{
+background:rgba(249,115,22,.1);
+color:#f97316;
+padding:8px 20px;
+border-radius:30px;
+font-weight:600;
+font-size:14px;
+}
+
+.popular-title{
+font-size:42px;
+font-weight:800;
+color:#0f172a;
+margin:0;
+}
+
+.highlight-orange{
+background:linear-gradient(90deg,#f59e0b,#f97316);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.view-btn{
+border:2px solid #3b82f6;
+color:#3b82f6;
+padding:10px 26px;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+background:transparent;
+}
+
+.view-btn:hover{
+background:#3b82f6;
+color:white;
+transform:translateY(-3px);
+}
+
+/* ================= CLEAN COURSE CARD ================= */
+
+.course-card-2{
+background:#ffffff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 6px 25px rgba(0,0,0,0.05);
+transition:all .3s ease;
+height:100%;
+display:flex;
+flex-direction:column;
+}
+
+/* Slight hover like screenshot */
+.course-card-2:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 35px rgba(0,0,0,0.08);
+}
+
+/* Image Section */
+.course-image{
+position:relative;
+}
+
+.course-image img{
+width:100%;
+height:210px;
+object-fit:cover;
+border-top-left-radius:20px;
+border-top-right-radius:20px;
+}
+
+/* Badges */
+.level, .category{
+position:absolute;
+top:14px;
+padding:6px 14px;
+font-size:12px;
+font-weight:600;
+border-radius:20px;
+background:#ffffff;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.level{
+left:14px;
+}
+
+.category{
+right:14px;
+color:#374151;
+}
+
+/* Badge Colors */
+.beginner{
+color:#16a34a;
+}
+
+.advanced{
+color:#dc2626;
+}
+
+/* Content */
+.course-content{
+padding:22px;
+flex-grow:1;
+display:flex;
+flex-direction:column;
+}
+
+/* Title */
+.course-content h5{
+font-size:18px;
+font-weight:700;
+color:#0f172a;
+line-height:1.4;
+margin-bottom:8px;
+}
+
+/* Instructor */
+.instructor{
+font-size:14px;
+color:#6b7280;
+margin-bottom:10px;
+}
+
+/* Meta Info */
+.course-meta{
+font-size:14px;
+color:#6b7280;
+margin-bottom:18px;
+}
+
+/* Bottom Price Row */
+.price-row{
+margin-top:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-top:1px solid #f1f5f9;
+padding-top:15px;
+}
+
+/* Price */
+.price{
+font-size:22px;
+font-weight:700;
+color:#0f172a;
+}
+
+/* Button */
+.enroll-btn,
+.view-btn{
+position:relative;
+overflow:hidden;
+transition:all .3s ease;
+}
+
+
+.enroll-btn:hover,
+.view-btn:hover{
+transform:translateY(-4px) scale(1.03);
+box-shadow:0 15px 40px rgba(59,130,246,.35);
+}
+/* Shimmer sweep */
+.enroll-btn::before,
+.view-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);
+transition:.6s;
+}
+
+.enroll-btn:hover::before,
+.view-btn:hover::before{
+left:100%;
+}
+
+/* Pulse animation */
+@keyframes pulseGlow{
+0%{box-shadow:0 0 0 0 rgba(59,130,246,.5);}
+70%{box-shadow:0 0 0 15px rgba(59,130,246,0);}
+100%{box-shadow:0 0 0 0 rgba(59,130,246,0);}
+}
+
+.enroll-btn{
+animation:pulseGlow 3s infinite;
+}
+.course-content h5{
+transition:all .3s ease;
+cursor:pointer;
+}
+
+.course-card-2:hover h5{
+color:#3b82f6;
+transform:translateX(5px);
+}
+.course-meta{
+transition:.3s;
+}
+
+.course-card-2:hover .course-meta{
+transform:translateX(5px);
+color:#334155;
+}
+/* ================= SECTION REVEAL ANIMATION ================= */
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:all .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Stagger delay */
+.course-card-2:nth-child(1){ transition-delay:.1s; }
+.course-card-2:nth-child(2){ transition-delay:.2s; }
+.course-card-2:nth-child(3){ transition-delay:.3s; }
+.course-card-2:nth-child(4){ transition-delay:.4s; }
+
+/* Image Zoom Hover */
+.course-image img{
+transition:transform .6s ease;
+}
+
+.course-card-2:hover .course-image img{
+transform:scale(1.07);
+}
+
+/* Floating subtle animation */
+@keyframes floatCard{
+0%{transform:translateY(0);}
+50%{transform:translateY(-5px);}
+100%{transform:translateY(0);}
+}
+
+.course-card-2:hover{
+animation:floatCard 3s ease-in-out infinite;
+}
+
+/* Button Glow */
+.enroll-btn{
+position:relative;
+overflow:hidden;
+}
+
+.enroll-btn::after{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);
+transition:.6s;
+}
+
+.enroll-btn:hover::after{
+left:100%;
+}
+/* ================= ANIMATED GRADIENT TEXT ================= */
+
+.highlight-orange{
+background:linear-gradient(90deg,#f59e0b,#f97316,#f59e0b);
+background-size:200% auto;
+-webkit-background-clip:text;
+color:transparent;
+animation:gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% center;}
+100%{background-position:200% center;}
+}
+
+/* Smooth Fade-Up Title */
+.popular-title{
+opacity:0;
+transform:translateY(40px);
+animation:titleReveal 1s ease forwards;
+}
+
+@keyframes titleReveal{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ================= FIXED ENROLL BUTTON ================= */
+
+.enroll-btn{
+background:linear-gradient(135deg,#3b82f6,#2563eb);
+color:#ffffff;
+border:none;
+padding:10px 22px;
+border-radius:30px;
+font-size:14px;
+font-weight:600;
+cursor:pointer;
+transition:all .3s ease;
+box-shadow:0 8px 20px rgba(37,99,235,.25);
+}
+
+/* Hover Effect */
+.enroll-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 30px rgba(37,99,235,.4);
+}
+
+/* Click Effect */
+.enroll-btn:active{
+transform:scale(0.97);
+}

@@ -169,6 +169,19 @@ el.classList.add("active");
 });
 }
 
+
+
+function revealOnScroll(){
+reveals.forEach((el)=>{
+const top = el.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+el.classList.add("active");
+}
+});
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
@@ -225,3 +238,5 @@ card.classList.add("show");
 
 window.addEventListener("scroll", revealCards);
 window.addEventListener("load", revealCards);
+
+
