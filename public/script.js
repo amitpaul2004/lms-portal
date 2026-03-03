@@ -340,3 +340,39 @@ async function logout(){
 
 // Run when page loads
 checkLogin();
+
+// Reveal animation
+
+
+window.addEventListener("scroll", () => {
+
+  reveals.forEach(el => {
+
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if(elementTop < windowHeight - 100){
+      el.classList.add("active");
+    }
+
+  });
+
+});
+const cards = document.querySelectorAll(".reveal-card");
+
+window.addEventListener("scroll", () => {
+
+  cards.forEach((card, index) => {
+
+    const windowHeight = window.innerHeight;
+    const cardTop = card.getBoundingClientRect().top;
+
+    if(cardTop < windowHeight - 100){
+      setTimeout(()=>{
+        card.classList.add("active");
+      }, index * 200); // stagger animation
+    }
+
+  });
+
+});

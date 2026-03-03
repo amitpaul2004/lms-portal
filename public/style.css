@@ -1027,3 +1027,431 @@ transition:.3s;
 .navbar .btn {
   margin-left: 10px;
 }
+
+/* ================= INSTRUCTORS SECTION ================= */
+
+.student-stories{
+  padding:100px 0;
+  background:linear-gradient(135deg,#f8fbff,#eef4ff);
+}
+
+.section-badge{
+  display:inline-block;
+  background:#ffffff;
+  padding:8px 20px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:500;
+  margin-bottom:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.section-title{
+  font-size:42px;
+  font-weight:700;
+}
+
+.gradient-text{
+  background:linear-gradient(90deg,#3b82f6,#6366f1);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.section-subtitle{
+  margin-top:15px;
+  color:#6b7280;
+  font-size:16px;
+}
+
+/* Cards */
+
+.testimonial-card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.05);
+  transition:all .4s ease;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.testimonial-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.1);
+}
+
+.quote-icon{
+  width:45px;
+  height:45px;
+  background:linear-gradient(135deg,#3b82f6,#6366f1);
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:15px;
+  font-size:20px;
+}
+
+.stars{
+  color:#facc15;
+  margin-bottom:15px;
+  font-size:18px;
+}
+
+.user-info{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-top:15px;
+}
+
+.user-info img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.user-info h6{
+  margin:0;
+  font-weight:600;
+}
+
+.user-info small{
+  color:#6b7280;
+}
+
+/* Reveal animation */
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+  transition:all .8s ease;
+}.student-stories{
+  background:#f8f9fb;
+  padding:100px 0;
+}
+
+.gradient-text{
+  background:linear-gradient(90deg,#3b82f6,#6366f1);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Card */
+.testimonial-card{
+  background:#ffffff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  transition:all .4s ease;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  height:100%;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.testimonial-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.1);
+}
+
+.quote-icon{
+  width:45px;
+  height:45px;
+  background:linear-gradient(135deg,#3b82f6,#6366f1);
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:15px;
+}
+
+.stars{
+  color:#facc15;
+  margin-bottom:15px;
+  font-size:18px;
+}
+
+.testimonial-text{
+  color:#4b5563;
+  margin-bottom:25px;
+}
+
+.user-info{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-top:auto;
+}
+
+.user-info img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.user-info h6{
+  margin:0;
+  font-weight:600;
+}
+
+.user-info small{
+  color:#6b7280;
+}
+
+/* Reveal animation */
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+  transition:all .8s ease;
+}
+/* ================= EXACT HEADER STYLE ================= */
+
+.section-header{
+  margin-bottom:70px;
+}
+
+/* Badge */
+.stories-badge{
+  display:inline-block;
+  padding:8px 22px;
+  font-size:14px;
+  border-radius:30px;
+  background:#eaf6f3;
+  color:#1f2937;
+  font-weight:500;
+  margin-bottom:25px;
+}
+
+/* Main Title */
+.stories-title{
+  font-size:48px;
+  font-weight:800;
+  color:#111827;
+  letter-spacing:-1px;
+  margin-bottom:20px;
+}
+
+/* Gradient word */
+.gradient-word{
+  background:linear-gradient(90deg,#4f46e5,#3b82f6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Subtitle */
+.stories-subtitle{
+  font-size:18px;
+  color:#6b7280;
+  max-width:700px;
+  margin:0 auto;
+  line-height:1.6;
+}
+/* SECTION BACKGROUND */
+.student-stories{
+  background:#f6f9fc;
+  padding:100px 0;
+}
+
+/* CARD */
+.review-card{
+  background:#ffffff;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.05);
+  height:100%;
+  transition:0.3s ease;
+}
+
+.review-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* QUOTE ICON */
+.quote-circle{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#4f46e5,#3b82f6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:22px;
+  margin-bottom:20px;
+}
+
+/* STARS */
+.stars{
+  color:#facc15;
+  font-size:18px;
+  margin-bottom:20px;
+}
+
+/* TEXT */
+.review-text{
+  color:#4b5563;
+  line-height:1.8;
+  font-size:16px;
+  margin-bottom:25px;
+}
+
+/* DIVIDER */
+.divider{
+  height:1px;
+  background:#e5e7eb;
+  margin-bottom:20px;
+}
+
+/* USER SECTION */
+.review-user{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.review-user img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.review-user h6{
+  margin:0;
+  font-weight:600;
+  color:#111827;
+}
+
+.review-user span{
+  font-size:14px;
+  color:#6b7280;
+}
+/* ================= PREMIUM TESTIMONIAL DESIGN ================= */
+
+.student-stories{
+  position:relative;
+  background:#f6f9fc;
+  padding:120px 0;
+  overflow:hidden;
+}
+
+/* Floating gradient background blob */
+.bg-blur{
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:radial-gradient(circle,rgba(59,130,246,0.2),transparent 70%);
+  top:-100px;
+  right:-100px;
+  border-radius:50%;
+  filter:blur(60px);
+  animation:floatBlob 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatBlob{
+  from{ transform:translateY(0px); }
+  to{ transform:translateY(30px); }
+}
+
+/* CARD */
+.review-card{
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 15px 50px rgba(0,0,0,0.06);
+  transition:all .4s ease;
+  transform:translateY(50px);
+  opacity:0;
+  height:100%;
+  position:relative;
+}
+
+.review-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 25px 70px rgba(0,0,0,0.12);
+}
+
+/* Reveal Animation */
+.reveal-card.active{
+  opacity:1;
+  transform:translateY(0);
+  transition:all .8s ease;
+}
+
+/* Quote Icon Animation */
+.quote-circle{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#4f46e5,#3b82f6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:22px;
+  margin-bottom:20px;
+  animation:pulseQuote 3s infinite ease-in-out;
+}
+
+@keyframes pulseQuote{
+  0%{ transform:scale(1); }
+  50%{ transform:scale(1.1); }
+  100%{ transform:scale(1); }
+}
+
+/* Animated Stars */
+.stars{
+  color:#facc15;
+  font-size:18px;
+  margin-bottom:20px;
+  letter-spacing:2px;
+  animation:starGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes starGlow{
+  from{ text-shadow:0 0 5px #facc15; }
+  to{ text-shadow:0 0 15px #facc15; }
+}
+
+/* Review Text */
+.review-text{
+  color:#4b5563;
+  line-height:1.8;
+  font-size:16px;
+  margin-bottom:25px;
+  transition:0.3s;
+}
+
+/* Divider */
+.divider{
+  height:1px;
+  background:#e5e7eb;
+  margin:25px 0;
+}
+
+/* User Section */
+.review-user{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.review-user img{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  object-fit:cover;
+  transition:0.3s;
+}
+
+.review-card:hover .review-user img{
+  transform:scale(1.1);
+}
