@@ -358,7 +358,7 @@ font-size:14px;
 .courses-section{
 position:relative;
 padding:120px 0;
-background:linear-gradient(135deg,#575858 0%, #eef2ff 50%, #c1c1c4 100%);
+background:linear-gradient(135deg,#ffffff 0%, #ffffff 50%, #ffffff 100%);
 overflow:hidden;
 }
 
@@ -490,7 +490,7 @@ color:transparent;
 }/* FEATURE CARD */
 
 .feature-card{
-background:linear-gradient(135deg,#0b0b0b 0%, #eef2ff 50%, #7b60d9 100%);
+background:linear-gradient(135deg,#817d7d 0%, #eef2ff 50%, #7b60d9 100%);
 padding:40px 28px;
 border-radius:28px; /* softer curve */
 box-shadow:0 8px 30px rgba(0,0,0,0.04);
