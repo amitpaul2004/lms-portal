@@ -1455,3 +1455,180 @@ transition:.3s;
 .review-card:hover .review-user img{
   transform:scale(1.1);
 }
+
+/* ================= CERTIFICATES SECTION ================= */
+
+.pricing-section{
+  position:relative;
+  padding:120px 0;
+  background:#ffffff;
+  overflow:hidden;
+}
+
+/* Floating Glow */
+.pricing-bg{
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,rgba(249,115,22,0.15),transparent 70%);
+  top:-100px;
+  right:-150px;
+  filter:blur(80px);
+  animation:floatGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow{
+  from{ transform:translateY(0px); }
+  to{ transform:translateY(40px); }
+}
+
+/* Header */
+.pricing-badge{
+  display:inline-block;
+  background:#fff7ed;
+  color:#b45309;
+  padding:8px 22px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:25px;
+}
+
+.pricing-title{
+  font-size:48px;
+  font-weight:800;
+  color:#111827;
+  margin-bottom:20px;
+}
+
+.gradient-orange{
+  background:linear-gradient(90deg,#f59e0b,#f97316);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.pricing-subtitle{
+  font-size:18px;
+  color:#6b7280;
+  max-width:750px;
+  margin:0 auto;
+}
+
+/* Cards */
+.pricing-card{
+  background:#ffffff;
+  padding:45px;
+  border-radius:25px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.06);
+  transition:0.4s ease;
+  position:relative;
+  height:100%;
+  opacity:0;
+  transform:translateY(50px);
+}
+
+.pricing-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 30px 80px rgba(0,0,0,0.12);
+}
+
+.reveal-price.active{
+  opacity:1;
+  transform:translateY(0);
+  transition:0.8s ease;
+}
+
+.pricing-card h4{
+  font-weight:700;
+}
+
+.plan-sub{
+  color:#6b7280;
+  margin-bottom:25px;
+}
+
+.price{
+  font-size:48px;
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+.price span{
+  font-size:16px;
+  color:#6b7280;
+}
+
+.plan-features{
+  list-style:none;
+  padding:0;
+  margin-bottom:30px;
+}
+
+.plan-features li{
+  margin-bottom:12px;
+  color:#374151;
+  transition:0.3s;
+}
+
+.plan-features li:hover{
+  transform:translateX(5px);
+}
+
+/* Buttons */
+.btn-outline-plan{
+  width:100%;
+  padding:12px;
+  border-radius:30px;
+  border:2px solid #3b82f6;
+  background:transparent;
+  color:#3b82f6;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-outline-plan:hover{
+  background:#3b82f6;
+  color:white;
+}
+
+.btn-gradient-plan{
+  width:100%;
+  padding:12px;
+  border-radius:30px;
+  border:none;
+  font-weight:600;
+  color:white;
+  background:linear-gradient(90deg,#3b82f6,#f97316);
+  transition:0.4s;
+}
+
+.btn-gradient-plan:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 30px rgba(249,115,22,0.4);
+}
+
+/* Popular Plan */
+.popular{
+  border:3px solid #3b82f6;
+  transform:scale(1.05);
+}
+
+.popular-badge{
+  position:absolute;
+  top:-15px;
+  left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,#3b82f6,#a855f7);
+  color:white;
+  padding:6px 18px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:600;
+  animation:pulseBadge 2s infinite ease-in-out;
+}
+
+@keyframes pulseBadge{
+  0%{ transform:translateX(-50%) scale(1); }
+  50%{ transform:translateX(-50%) scale(1.1); }
+  100%{ transform:translateX(-50%) scale(1); }
+}

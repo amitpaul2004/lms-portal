@@ -376,3 +376,22 @@ window.addEventListener("scroll", () => {
   });
 
 });
+
+const pricingCards = document.querySelectorAll(".reveal-price");
+
+window.addEventListener("scroll", () => {
+
+  pricingCards.forEach((card, index) => {
+
+    const windowHeight = window.innerHeight;
+    const cardTop = card.getBoundingClientRect().top;
+
+    if(cardTop < windowHeight - 100){
+      setTimeout(()=>{
+        card.classList.add("active");
+      }, index * 200);
+    }
+
+  });
+
+});
