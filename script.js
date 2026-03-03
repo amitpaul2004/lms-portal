@@ -23,7 +23,7 @@ nav.classList.remove("scrolled");
 
 /* reveal animation */
 
-const reveals = document.querySelectorAll(".reveal");
+
 
 function revealOnLoad() {
   reveals.forEach(el => {
@@ -32,6 +32,8 @@ function revealOnLoad() {
     }
   });
 }
+
+
 
 window.addEventListener("load", revealOnLoad);
 window.addEventListener("scroll", revealOnLoad);
@@ -156,3 +158,70 @@ counter.innerText = "98%";
 updateCounter();
 
 });
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+reveals.forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight - 100){
+el.classList.add("active");
+}
+});
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-animated");
+
+window.addEventListener("scroll", () => {
+
+let currentSection = "";
+
+sections.forEach(section => {
+
+const sectionTop = section.offsetTop - 150;
+const sectionHeight = section.clientHeight;
+
+if (scrollY >= sectionTop) {
+currentSection = section.getAttribute("id");
+}
+
+});
+
+navLinks.forEach(link => {
+
+link.classList.remove("active");
+
+if(link.getAttribute("href") === "#" + currentSection){
+link.classList.add("active");
+}
+
+});
+
+});
+const courseCards = document.querySelectorAll(".feature-card");
+
+function revealCards(){
+
+const triggerBottom = window.innerHeight - 100;
+
+courseCards.forEach((card, index)=>{
+
+const cardTop = card.getBoundingClientRect().top;
+
+if(cardTop < triggerBottom){
+
+setTimeout(()=>{
+card.classList.add("show");
+}, index * 150); // stagger delay
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll", revealCards);
+window.addEventListener("load", revealCards);

@@ -351,3 +351,259 @@ margin:0;
 opacity:.7;
 font-size:14px;
 }
+/* SECTION BACKGROUND */
+
+/* COURSES SECTION BACKGROUND */
+
+.courses-section{
+position:relative;
+padding:120px 0;
+background:linear-gradient(135deg,#2a6fca 0%, #eef2ff 50%, #3642cc 100%);
+overflow:hidden;
+}
+
+/* Soft animated background glow */
+
+.courses-section::before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:radial-gradient(circle,rgba(99,102,241,.25),transparent 70%);
+top:-150px;
+right:-150px;
+filter:blur(80px);
+z-index:0;
+animation:glowMove 8s infinite alternate ease-in-out;
+}
+
+@keyframes glowMove{
+0%{transform:translateY(0);}
+100%{transform:translateY(40px);}
+}
+
+.courses-section .container{
+position:relative;
+z-index:1;
+}
+
+/* Badge */
+
+.badge-custom{
+background:rgba(96,165,250,.1);
+color:#3b82f6;
+padding:8px 20px;
+border-radius:30px;
+font-weight:600;
+}
+
+/* Gradient Title */
+
+.title-gradient{
+background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+-webkit-background-clip:text;
+color:transparent;
+animation:gradientMove 5s infinite alternate;
+}
+
+@keyframes gradientMove{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+/* Subtitle */
+
+.subtitle{
+color:#475569;
+max-width:600px;
+margin:auto;
+}
+
+/* CARD DESIGN */
+
+.course-card{
+background:white;
+padding:35px 25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+transition:all .4s ease;
+height:100%;
+text-align:left;
+}
+
+.course-card:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* ICON BOX */
+
+.icon-box{
+width:65px;
+height:65px;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+margin-bottom:20px;
+color:white;
+transition:transform .4s ease;
+}
+
+.course-card:hover .icon-box{
+transform:rotate(8deg) scale(1.1);
+}
+
+/* Colors */
+
+.blue{background:linear-gradient(135deg,#3b82f6,#60a5fa);}
+.orange{background:linear-gradient(135deg,#f59e0b,#fb923c);}
+.green{background:linear-gradient(135deg,#10b981,#34d399);}
+.purple{background:linear-gradient(135deg,#8b5cf6,#a78bfa);}
+
+/* REVEAL ANIMATION */
+
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:all 1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+/* Section Title */
+
+.section-title{
+color:#1e293b;   /* Dark navy like hero */
+font-weight:800;
+}
+
+/* Gradient Highlight Word */
+
+.highlight-word{
+background:linear-gradient(90deg,#60a5fa,#8b5cf6);
+-webkit-background-clip:text;
+color:transparent;
+}/* FEATURE CARD */
+
+.feature-card{
+background:linear-gradient(135deg,#7b2aee 0%, #eef2ff 50%, #7b60d9 100%);
+padding:40px 28px;
+border-radius:28px; /* softer curve */
+box-shadow:0 8px 30px rgba(0,0,0,0.04);
+transition:all .4s ease;
+height:100%;
+opacity:0;
+transform:translateY(60px);
+transition:all .8s cubic-bezier(.17,.67,.83,.67);
+}
+/* WHEN ACTIVE */
+
+.feature-card.show{
+opacity:1;
+transform:translateY(0);
+}
+/* Hover animation */
+
+.feature-card:hover{
+transform:translateY(-12px);
+box-shadow:0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* Title */
+
+.feature-card h5{
+font-weight:700;
+color:#0f172a; /* dark navy */
+margin-bottom:12px;
+}
+
+/* Paragraph */
+
+.feature-card p{
+color:#64748b; /* soft gray */
+font-size:15px;
+line-height:1.6;
+margin:0;
+}
+
+/* Icon wrapper */
+
+.icon-wrap{
+width:70px;
+height:70px;
+border-radius:22px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+margin-bottom:25px;
+color:white;
+transition:transform .4s ease;
+}
+
+/* Icon hover rotate */
+
+.feature-card:hover .icon-wrap{
+transform:scale(1.1) rotate(6deg);
+}
+
+/* Icon colors */
+
+.blue{
+background:linear-gradient(135deg,#60a5fa,#3b82f6);
+}
+
+.orange{
+background:linear-gradient(135deg,#fb923c,#f59e0b);
+}
+
+.teal{
+background:linear-gradient(135deg,#38bdf8,#06b6d4);
+}
+
+.purple{
+background:linear-gradient(135deg,#a78bfa,#8b5cf6);
+}
+
+
+/* NAV UNDERLINE BASE */
+
+.nav-animated{
+position:relative;
+color:white;
+font-weight:500;
+}
+
+/* Underline hidden initially */
+
+.nav-animated::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:3px;
+border-radius:10px;
+background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+transition:width .4s ease;
+}
+
+/* Hover effect */
+
+.nav-animated:hover::after{
+width:100%;
+}
+
+/* ACTIVE STATE */
+
+.nav-animated.active::after{
+width:100%;
+}.row.g-4{
+row-gap:40px;
+}
+
+
