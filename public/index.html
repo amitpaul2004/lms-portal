@@ -63,10 +63,10 @@
 <li class="nav-item" id="authArea">
   <button id="loginBtn"
           class="btn btn-outline-light magnetic"
-          onclick="window.location.href='/login/login.html'">
+          onclick="window.location.href='/login/login.html'"><i class="bi bi-door-open-fill"></i>
     Login
   </button>
-</li>
+</li> 
 
 </button>
 <a href="#" id="trialBtn" class="btn btn-primary">Start Free Trial</a>
@@ -862,7 +862,7 @@ const trialBtn = document.getElementById("trialBtn");
 
 if(data.loggedIn){
 
-trialBtn.innerText = "My Dashboard";
+trialBtn.innerHTML = '<i class="bi bi-speedometer2"></i> My Dashboard';
 trialBtn.href = "/dashboard.html";
 
 }else{
