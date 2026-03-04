@@ -20,7 +20,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/learnflow")
 // ================= MIDDLEWARE =================
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-
+app.use(express.static("public"))
 app.use(session({
   secret:"lmssecret",
   resave:false,
@@ -47,21 +47,39 @@ app.post("/register", async (req,res)=>{
 });
 
 // ================= LOGIN =================
+// ================= LOGIN =================
 app.post("/login", async (req,res)=>{
-  const {email,password} = req.body;
 
-  const user = await User.findOne({email});
-  if(!user){
-    return res.status(400).json({message:"User not found. Please sign up."});
-  }
+try{
 
-  const valid = await bcrypt.compare(password,user.password);
-  if(!valid){
-    return res.status(400).json({message:"Incorrect password"});
-  }
+const {email,password} = req.body;
 
-  req.session.userId = user._id;
-  res.json({message:"Login successful"});
+const user = await User.findOne({email});
+
+if(!user){
+return res.status(400).json({message:"User not found. Please sign up."});
+}
+
+const valid = await bcrypt.compare(password,user.password);
+
+if(!valid){
+return res.status(400).json({message:"Incorrect password"});
+}
+
+req.session.userId = user._id;
+
+res.json({
+message:"Login successful",
+name:user.name
+});
+
+}catch(err){
+
+console.log("LOGIN ERROR:",err);
+res.status(500).json({message:"Server error"});
+
+}
+
 });
 // ================= ENROLL =================
 app.post("/enroll", async (req,res)=>{

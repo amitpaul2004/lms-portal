@@ -407,3 +407,35 @@ window.addEventListener("scroll", () => {
     }
 
 });
+window.addEventListener("DOMContentLoaded",()=>{
+
+const loggedIn = localStorage.getItem("loggedIn")
+const username = localStorage.getItem("username")
+
+const trialBtn = document.getElementById("trialBtn")
+const usernameBox = document.getElementById("username")
+const profileBox = document.getElementById("profileBox")
+
+if(!loggedIn){
+
+profileBox.style.display = "none"
+
+}else{
+
+trialBtn.innerText = "My Dashboard"
+trialBtn.href = "/dashboard.html"
+
+usernameBox.innerText = username
+
+}
+
+})
+
+function logoutUser(){
+
+localStorage.removeItem("loggedIn")
+localStorage.removeItem("username")
+
+location.reload()
+
+}

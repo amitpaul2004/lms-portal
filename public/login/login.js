@@ -10,46 +10,46 @@ particlesJS("particles-js", {
 });
 
 // LOGIN
-async function loginUser(){
+function loginUser(){
 
-const email = document.getElementById("email").value;
-const password = document.getElementById("password").value;
+const email = document.getElementById("email").value
+const password = document.getElementById("password").value
 
-const res = await fetch("/login",{
-  method:"POST",
-  credentials: "include",  // 🔥 IMPORTANT
-  headers:{ "Content-Type":"application/json" },
-  body:JSON.stringify({email,password})
-});
-const data = await res.json();
+fetch("/login",{
 
-if(res.ok){
-  alert("Login successful!");
-  window.location.href="/index.html";
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+email:email,
+password:password
+})
+
+})
+
+.then(res=>res.json())
+
+.then(data=>{
+
+if(data.message === "Login successful"){
+
+alert("Login Successful")
+
+window.location.href="/"
+
 }else{
-  alert(data.message);   // User not found OR Wrong password
+
+alert(data.message)
+
 }
-}
 
-// REGISTER
-async function registerUser(){
+})
 
-const name = document.getElementById("name").value;
-const email = document.getElementById("email").value;
-const password = document.getElementById("password").value;
+.catch(err=>{
+console.log(err)
+alert("Server error")
+})
 
-const res = await fetch("/register",{
-  method:"POST",
-  headers:{ "Content-Type":"application/json" },
-  body:JSON.stringify({name,email,password})
-});
-
-const data = await res.json();
-
-if(res.ok){
-  alert("Account created successfully!");
-  window.location.href="login.html";
-}else{
-  alert(data.message);
-}
 }

@@ -1973,4 +1973,47 @@ transition:0.3s;
 .footer-social a:hover{
 background:#3b82f6;
 transform:translateY(-4px);
+}.nav-buttons{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.profile-dropdown{
+position:relative;
+}
+
+.profile-btn{
+background:transparent;
+border:1px solid rgba(255,255,255,0.4);
+padding:10px 16px;
+border-radius:10px;
+color:white;
+display:flex;
+align-items:center;
+gap:8px;
+cursor:pointer;
+}
+
+.dropdown-menu{
+position:absolute;
+top:45px;
+right:0;
+background:#0f172a;
+border-radius:10px;
+padding:10px 0;
+width:180px;
+display:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.dropdown-menu a{
+display:block;
+padding:10px 16px;
+color:#e2e8f0;
+text-decoration:none;
+}
+
+.dropdown-menu a:hover{
+background:#1e293b;
 }
