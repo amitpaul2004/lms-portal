@@ -1,31 +1,375 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Dashboard</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnFlow Dashboard</title>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<style>
+
+body{
+background:#f5f7fb;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:250px;
+height:100vh;
+background:white;
+position:fixed;
+padding:25px;
+border-right:1px solid #eee;
+}
+
+.logo{
+font-weight:700;
+font-size:22px;
+color:#5a7cff;
+margin-bottom:30px;
+}
+
+.sidebar a{
+display:block;
+padding:12px 15px;
+margin-bottom:8px;
+border-radius:10px;
+text-decoration:none;
+color:#666;
+transition:.3s;
+}
+
+.sidebar a:hover{
+background:#eef3ff;
+transform:translateX(5px);
+}
+
+.sidebar .active{
+background:linear-gradient(135deg,#5a7cff,#6ed4ff);
+color:white;
+}
+
+/* MAIN */
+
+.main{
+margin-left:250px;
+padding:30px;
+}
+
+/* TOPBAR */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.search{
+width:380px;
+border:none;
+padding:10px 15px;
+border-radius:25px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.user{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.avatar{
+width:36px;
+height:36px;
+border-radius:50%;
+background:linear-gradient(135deg,#5a7cff,#6ed4ff);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:600;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-bottom:35px;
+}
+
+.stat-card{
+background:white;
+padding:22px;
+border-radius:16px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+transition:.35s;
+}
+
+.stat-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.icon-box{
+width:45px;
+height:45px;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+margin-bottom:10px;
+}
+
+.icon1{background:linear-gradient(135deg,#5a7cff,#8f9fff);}
+.icon2{background:linear-gradient(135deg,#ff9a44,#ffcc70);}
+.icon3{background:linear-gradient(135deg,#4adede,#6ed4ff);}
+.icon4{background:linear-gradient(135deg,#ff6a6a,#ffa36a);}
+
+/* COURSES */
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.course-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+transition:.4s;
+}
+
+.course-card:hover{
+transform:translateY(-10px) scale(1.02);
+}
+
+.course-card img{
+width:100%;
+height:160px;
+object-fit:cover;
+transition:.4s;
+}
+
+.course-card:hover img{
+transform:scale(1.1);
+}
+
+.course-body{
+padding:15px;
+}
+
+/* ANIMATION */
+
+.fade{
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp .8s forwards;
+}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
 </head>
 
-<body class="bg-dark text-white text-center">
+<body>
 
-<h1 class="mt-5">Welcome to Your Dashboard</h1>
-<p>Your courses will appear here</p>
+<!-- SIDEBAR -->
 
-<button class="btn btn-danger mt-3" onclick="logout()">Logout</button>
+<div class="sidebar">
+
+<div class="logo">
+<i class="bi bi-mortarboard"></i> LearnFlow
+</div>
+
+<a class="active"><i class="bi bi-grid"></i> Dashboard</a>
+<a><i class="bi bi-book"></i> My Courses</a>
+<a><i class="bi bi-bar-chart"></i> Progress</a>
+<a><i class="bi bi-award"></i> Certificates</a>
+<a><i class="bi bi-chat"></i> Messages</a>
+<a><i class="bi bi-gear"></i> Settings</a>
+
+</div>
+
+
+<!-- MAIN -->
+
+<div class="main">
+
+<!-- TOPBAR -->
+
+<div class="topbar fade">
+
+<input class="search" placeholder="Search courses, lessons...">
+
+<div class="user">
+<i class="bi bi-bell fs-5"></i>
+<div class="avatar" id="avatar">U</div>
+<span id="username">User</span>
+</div>
+
+</div>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stat-card fade">
+
+<div class="icon-box icon1">
+<i class="bi bi-book"></i>
+</div>
+
+<h3 class="counter" data-target="12">0</h3>
+<p>Courses Enrolled</p>
+
+</div>
+
+
+<div class="stat-card fade">
+
+<div class="icon-box icon2">
+<i class="bi bi-clock"></i>
+</div>
+
+<h3 class="counter" data-target="156">0</h3>
+<p>Hours Learned</p>
+
+</div>
+
+
+<div class="stat-card fade">
+
+<div class="icon-box icon3">
+<i class="bi bi-award"></i>
+</div>
+
+<h3 class="counter" data-target="4">0</h3>
+<p>Certificates</p>
+
+</div>
+
+
+<div class="stat-card fade">
+
+<div class="icon-box icon4">
+<i class="bi bi-fire"></i>
+</div>
+
+<h3><span class="counter" data-target="7">0</span> days</h3>
+<p>Current Streak</p>
+
+</div>
+
+</div>
+
+
+<h4 class="mb-3">Continue Learning</h4>
+
+<div class="course-grid">
+
+<div class="course-card fade">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+
+<div class="course-body">
+<h6>Complete Web Development</h6>
+<p class="text-muted">by Sarah Johnson</p>
+</div>
+
+</div>
+
+
+<div class="course-card fade">
+
+<img src="https://images.unsplash.com/photo-1558655146-d09347e92766">
+
+<div class="course-body">
+<h6>UI/UX Design Masterclass</h6>
+<p class="text-muted">by Michael Chen</p>
+</div>
+
+</div>
+
+
+<div class="course-card fade">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+
+<div class="course-body">
+<h6>Cyber Security Basics</h6>
+<p class="text-muted">by David Kim</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 
 <script>
 
-function logout(){
+/* Username from login */
 
-fetch("/logout")
-.then(()=>{
+const name = localStorage.getItem("username");
 
-alert("Logged out");
+if(name){
 
-window.location.href="/";
+document.getElementById("username").innerText = name;
 
-});
+document.getElementById("avatar").innerText = name.charAt(0).toUpperCase();
 
 }
+
+
+/* Counter animation */
+
+const counters = document.querySelectorAll(".counter")
+
+counters.forEach(counter => {
+
+const target = +counter.getAttribute("data-target")
+let count = 0
+
+const update = () => {
+
+count += target / 80
+
+if(count < target){
+
+counter.innerText = Math.ceil(count)
+setTimeout(update,20)
+
+}else{
+
+counter.innerText = target
+
+}
+
+}
+
+update()
+
+})
+
+
 
 </script>
 

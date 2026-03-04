@@ -35,9 +35,9 @@ password:password
 
 if(data.message === "Login successful"){
 
-alert("Login Successful")
+localStorage.setItem("username", data.name)
 
-window.location.href="/"
+window.location.href = "/"
 
 }else{
 
