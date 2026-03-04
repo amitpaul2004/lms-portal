@@ -13,7 +13,8 @@ const app = express();
 
 
 // ================= DATABASE =================
-mongoose.connect("mongodb://127.0.0.1:27017/learnflow")
+mongoose.connect("mongodb+srv://lmsuser:lms12345@cluster0.6dwomnu.mongodb.net/learnflow")
+// mongodb+srv://lmsuser:<db_password>@cluster0.6dwomnu.mongodb.net/?appName=Cluster0
 .then(()=>console.log("MongoDB Connected"))
 .catch(err=>console.log(err));
 
