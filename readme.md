@@ -131,35 +131,35 @@ mongoose.connect("mongodb+srv://lmsuser:lms12345@cluster.mongodb.net/learnflow")
 ---
 
 🎓 LMS Dashboard Features
-
+```tree
 ✔ Courses Enrolled Counter
 ✔ Hours Learned Tracker
 ✔ Certificates Earned
 ✔ Learning Streak
 ✔ Continue Learning Section
 ✔ User Profile Dropdown
-
+```
 ---
 
 🔐 Authentication System
-
+```tree
 The system includes:
 
 • Signup with encrypted password
 • Login authentication
 • Session management
 • Protected course enrollment
-
+```
 ---
 
 🚀 Deployment
 
 You can deploy using:
-
+```tree
 • Render – Backend hosting
 • MongoDB Atlas – Database
 • GitHub – Version control
-
+```
 ---
 
 👨‍💻 Author
@@ -177,9 +177,10 @@ https://linkedin.com/in/yourprofile
 ---
 
 ⭐ Support
-
+```tree
 If you like this project:
 
 ⭐ Star the repository
 🍴 Fork it
 🚀 Build your own LMS
+```
