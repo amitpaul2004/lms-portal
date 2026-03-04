@@ -27,6 +27,29 @@ padding:25px;
 border-right:1px solid #eee;
 }
 
+.back-btn{
+
+background:linear-gradient(135deg,#5a7cff,#6ed4ff);
+border:none;
+color:white;
+padding:8px 16px;
+border-radius:25px;
+font-weight:500;
+display:flex;
+align-items:center;
+gap:6px;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+transition:0.3s;
+
+}
+
+.back-btn:hover{
+
+transform:translateX(-4px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+
+}
+
 .logo{
 font-weight:700;
 font-size:22px;
@@ -215,6 +238,10 @@ transform:translateY(0);
 
 <div class="topbar fade">
 
+    <button class="back-btn" onclick="goBack()">
+<i class="bi bi-arrow-left"></i> Back
+</button>
+
 <input class="search" placeholder="Search courses, lessons...">
 
 <div class="user">
@@ -222,6 +249,8 @@ transform:translateY(0);
 <div class="avatar" id="avatar">U</div>
 <span id="username">User</span>
 </div>
+
+
 
 </div>
 
@@ -368,6 +397,11 @@ counter.innerText = target
 update()
 
 })
+function goBack(){
+
+window.location.href="/";
+
+}
 
 
 
