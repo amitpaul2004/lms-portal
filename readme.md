@@ -183,3 +183,62 @@ If you like this project:
 ⭐ Star the repository
 🍴 Fork it
 🚀 Build your own LMS
+```
+## 🎋 ER Diagram 
+
+```mermaid
+erDiagram
+
+USER {
+    string _id
+    string name
+    string email
+    string password
+}
+
+COURSE {
+    string _id
+    string courseName
+    string instructor
+    int duration
+}
+
+ENROLLMENT {
+    string _id
+    string userId
+    string courseId
+    date enrolledAt
+}
+
+USER ||--o{ ENROLLMENT : enrolls
+COURSE ||--o{ ENROLLMENT : contains
+```
+
+---
+
+### What this ER Diagram shows
+
+**USER**
+- `_id`
+- `name`
+- `email`
+- `password`
+
+**COURSE**
+- `_id`
+- `courseName`
+- `instructor`
+- `duration`
+
+**ENROLLMENT**
+- `_id`
+- `userId`
+- `courseId`
+- `enrolledAt`
+
+Relationships:
+- One **User** can enroll in **many Courses**
+- One **Course** can have **many Users**
+
+---
+
