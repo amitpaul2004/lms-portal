@@ -395,3 +395,15 @@ window.addEventListener("scroll", () => {
   });
 
 });
+const ctaSection = document.querySelector(".cta-section");
+
+window.addEventListener("scroll", () => {
+
+    const position = ctaSection.getBoundingClientRect().top;
+
+    if(position < window.innerHeight - 100){
+        ctaSection.style.opacity = "1";
+        ctaSection.style.transform = "translateY(0)";
+    }
+
+});
