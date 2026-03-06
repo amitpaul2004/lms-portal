@@ -14,6 +14,12 @@
 ```
 lms-portal-84cx.onrender.com
 ```
+---
+
+# 📃 Docs 
+```
+[lms-portal-84cx.onrender.com](https://docs.google.com/document/d/1yYozqmxrII9Q5xRjG3cAiRftEdo6hvR5lcHxrk6wuhg/edit?usp=sharing)
+```
 
 ---
 
